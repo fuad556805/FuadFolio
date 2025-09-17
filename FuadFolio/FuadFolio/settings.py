@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-7w)r1*d=kqo!*5)eu@=x%21(vr9dw@!ty)h*uy7_194@$cx@x7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# Fix for Render deployment
+ALLOWED_HOSTS = ['fuadfolio.onrender.com']
 
 
 # Application definition
@@ -83,10 +84,10 @@ WSGI_APPLICATION = 'FuadFolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'portfolio_db',
-        'USER': 'root',
-        'PASSWORD': 'fuad1234@',   # root password
-        'HOST': 'localhost',
+        'NAME': 'bniglvwjgbtv5jxk18pz',
+        'USER': 'una1lxrmrlv4ghfr',
+        'PASSWORD': 'MQEXCHY7mCnyneLeYQcg',
+        'HOST': 'bniglvwjgbtv5jxk18pz-mysql.services.clever-cloud.com',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
@@ -131,6 +132,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [STATIC_DIR, ]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
