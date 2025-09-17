@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Link the about.css -->
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+<section class="about-section">
+
+  <!-- Name / Title Card -->
+  <div class="about-card">
+    <h3>Al Fahim Fuad</h3>
+    <h5>Computer Science and Engineering<br>East West University, Dhaka</h5>
+  </div>
+
+  <!-- Education Cards -->
+  <div class="about-card">
+    <h3>HSC 2021</h3>
+    <h5>Agricultural University College, Mymensingh</h5>
+    <h3>SSC 2019</h3>
+    <h5>Anjuman Adarsha Govt High School, Netrakona</h5>
+    <p></p>
+  </div>
+
+  <!-- Contact Info Card -->
+  <div class="about-card contact-info">
+    <h3>Contact</h3>
+    <p>Email: fuad556805@gmail.com</p>
+    <p>Phone: 01338136424</p>
+    <p>Permanent Address: Ghatail,Tangail</p>
+    <p>Current Address: South Banasree,Dhaka</p>
+  </div>
+  
+
+</section>
+{% endblock %}
