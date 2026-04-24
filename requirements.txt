@@ -38,3 +38,9 @@ traitlets==5.14.3
 tzdata==2025.2
 wcwidth==0.2.13
 whitenoise==6.9.0
+dj-database-url==3.0.1
+Django==4.2
+gunicorn==23.0.0
+pillow==11.3.0
+python-dotenv==1.1.1
+whitenoise==6.9.0

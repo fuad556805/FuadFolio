@@ -1,0 +1,44 @@
+# FuadFolio
+
+A personal portfolio website built with Django 4.2.
+
+## Stack
+
+- **Language**: Python 3.12
+- **Framework**: Django 4.2
+- **Database**: SQLite (`db.sqlite3` at the repo root)
+- **Static files**: WhiteNoise
+- **Production server**: Gunicorn
+
+## Project Layout
+
+- `FuadFolio/` — Django project (settings, urls, wsgi)
+- `home/`, `about/`, `portfolio/`, `contact/` — Django apps
+- `templates/` — shared HTML templates
+- `static/` — source static assets (css, images)
+- `staticfiles/` — collected static files (used in production)
+- `manage.py` — Django management entrypoint
+
+## Running
+
+The `Start application` workflow runs:
+
+```
+python manage.py runserver 0.0.0.0:5000
+```
+
+The app listens on port 5000 and is served through the Replit preview proxy.
+
+## Configuration Notes
+
+- `ALLOWED_HOSTS = ['*']` and `CSRF_TRUSTED_ORIGINS` cover the Replit preview proxy.
+- Database was migrated from MySQL (Clever Cloud) to SQLite so the app runs in Replit without external DB credentials.
+- `DEBUG` defaults to `True` in development; set the `DEBUG` env var to `False` for production behavior.
+- WhiteNoise is enabled for serving static files.
+
+## Deployment
+
+Configured for Replit Autoscale:
+
+- Build: `python manage.py collectstatic --noinput && python manage.py migrate --noinput`
+- Run: `gunicorn --bind=0.0.0.0:5000 --reuse-port FuadFolio.wsgi:application`

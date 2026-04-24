@@ -26,10 +26,25 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = 'django-insecure-7w)r1*d=kqo!*5)eu@=x%21(vr9dw@!ty)h*uy7_194@$cx@x7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-# Fix for Render deployment
-ALLOWED_HOSTS = ['fuadfolio.onrender.com']
+# Allow all hosts since the Replit preview proxies through different hostnames.
+ALLOWED_HOSTS = ['*']
+
+# Trust the Replit preview origin for CSRF-protected POST requests (e.g. contact form).
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.replit.dev',
+    'https://*.repl.co',
+    'https://*.replit.app',
+    'https://*.kirk.replit.dev',
+    'https://*.picard.replit.dev',
+    'https://*.riker.replit.dev',
+    'https://*.worf.replit.dev',
+    'https://*.janeway.replit.dev',
+    'https://*.spock.replit.dev',
+    'https://*.sisko.replit.dev',
+    'https://*.archer.replit.dev',
+]
 
 
 # Application definition
@@ -49,6 +64,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -83,15 +99,8 @@ WSGI_APPLICATION = 'FuadFolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bniglvwjgbtv5jxk18pz',
-        'USER': 'una1lxrmrlv4ghfr',
-        'PASSWORD': 'MQEXCHY7mCnyneLeYQcg',
-        'HOST': 'bniglvwjgbtv5jxk18pz-mysql.services.clever-cloud.com',
-        'PORT': '3306',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -133,6 +142,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+if not DEBUG:
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
