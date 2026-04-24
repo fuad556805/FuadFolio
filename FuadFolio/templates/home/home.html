@@ -17,7 +17,11 @@
       <!-- AI Robot Card -->
       <div class="col-md-6 d-flex justify-content-center">
         <div class="card robot-card shadow-lg">
-          <img src="{% static 'images/fuad.png' %}" class="card-img-top" alt="Fuad AI Robot">
+          {% if profile and profile.photo %}
+              <img src="{{ profile.photo.url }}" class="card-img-top" alt="Fuad AI Robot">
+          {% else %}
+              <img src="{% static 'images/fuad.png' %}" class="card-img-top" alt="Fuad AI Robot">
+          {% endif %}
           <div class="card-body text-center">
             <h5 class="card-title text-glow">AF Fuad</h5>
             <p class="card-text">Machine Learning Enthusiast & AI Explorer</p>
