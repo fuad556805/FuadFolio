@@ -1,34 +1,85 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content %}
-<section class="hero-ai d-flex align-items-center position-relative">
-  <div class="container">
-    <div class="row align-items-center">
+{% block title %}Al Fahim Fuad — Data Science & ML Portfolio{% endblock %}
 
-      <!-- Text Section -->
-      <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
-        <h1 class="display-4 fw-bold text-glow">Hello! I'm Fuad</h1>
-        <h3 class="mb-3 text-glow">Data Science & Machine Learning</h3>
-        <p class="lead text-light">Creating intelligent, futuristic, and visually stunning websites powered by AI and data-driven insights.</p>
-        <a href="{% url 'portfolio' %}" class="btn btn-danger btn-lg mt-3">Show Projects</a>
+{% block content %}
+<section class="hero container-x">
+  <div class="hero-grid">
+    <div class="reveal">
+      <span class="eyebrow"><span class="pulse"></span> Available for collaboration</span>
+      <h1>Hi, I'm <span class="grad">Al Fahim Fuad</span></h1>
+      <p class="role">Data Science · Machine Learning · AI Engineering</p>
+      <p class="lead">
+        I design and ship intelligent systems &mdash; from data pipelines and predictive models
+        to clean, futuristic web experiences powered by AI. Let's turn data into something delightful.
+      </p>
+      <div class="hero-cta">
+        <a href="{% url 'portfolio' %}" class="btn btn-primary">View Projects →</a>
+        <a href="{% url 'contact' %}" class="btn btn-ghost">Get in touch</a>
       </div>
 
-      <!-- AI Robot Card -->
-      <div class="col-md-6 d-flex justify-content-center">
-        <div class="card robot-card shadow-lg">
-          <img src="{% static 'images/fuad.png' %}" class="card-img-top" alt="Fuad AI Robot">
-          <div class="card-body text-center">
-            <h5 class="card-title text-glow">AF Fuad</h5>
-            <p class="card-text">Machine Learning Enthusiast & AI Explorer</p>
-          </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="num">3+</div><div class="lbl">Years coding</div></div>
+        <div class="stat"><div class="num">15+</div><div class="lbl">Projects shipped</div></div>
+        <div class="stat"><div class="num">∞</div><div class="lbl">Ideas in queue</div></div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="portrait-card">
+        <img src="{% static 'images/fuad.png' %}" alt="Al Fahim Fuad">
+        <div class="portrait-meta">
+          <h3>AF FUAD</h3>
+          <p>ML Enthusiast &amp; AI Explorer</p>
         </div>
       </div>
-
     </div>
   </div>
+</section>
 
-  <!-- Animated AI background dots -->
-  <div class="ai-bg-dots"></div>
+<section class="section container-x">
+  <h2 class="section-title reveal">What I Work With</h2>
+  <p class="section-sub reveal">A toolbox of technologies I use day-to-day to ship products end&#8209;to&#8209;end.</p>
+  <div class="chips reveal">
+    <span class="chip">Python</span>
+    <span class="chip">Pandas</span>
+    <span class="chip">NumPy</span>
+    <span class="chip">scikit-learn</span>
+    <span class="chip">TensorFlow</span>
+    <span class="chip">PyTorch</span>
+    <span class="chip">Django</span>
+    <span class="chip">FastAPI</span>
+    <span class="chip">PostgreSQL</span>
+    <span class="chip">Matplotlib</span>
+    <span class="chip">Seaborn</span>
+    <span class="chip">Git</span>
+  </div>
+</section>
+
+<section class="section container-x">
+  <h2 class="section-title reveal">What I Do</h2>
+  <p class="section-sub reveal">Three focus areas where data, models, and clean engineering meet.</p>
+
+  <div class="about-grid">
+    <div class="glass-card reveal">
+      <div class="icon">DS</div>
+      <h3>Data Science</h3>
+      <p>Turning raw, messy datasets into clear insights through cleaning, exploration,
+        statistics, and beautiful visualizations.</p>
+    </div>
+    <div class="glass-card reveal">
+      <div class="icon">ML</div>
+      <h3>Machine Learning</h3>
+      <p>Building, evaluating, and deploying classical ML and deep-learning models that
+        actually solve a real-world problem.</p>
+    </div>
+    <div class="glass-card reveal">
+      <div class="icon">UI</div>
+      <h3>Web Engineering</h3>
+      <p>Crafting fast, responsive, and modern web apps with Django, REST APIs, and
+        carefully designed UI systems.</p>
+    </div>
+  </div>
 </section>
 {% endblock %}

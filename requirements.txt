@@ -44,3 +44,4 @@ gunicorn==23.0.0
 pillow==11.3.0
 python-dotenv==1.1.1
 whitenoise==6.9.0
+psycopg2-binary

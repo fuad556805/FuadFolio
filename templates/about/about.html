@@ -1,32 +1,66 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_css %}
-<link rel="stylesheet" href="{% static 'css/about.css' %}">
-{% endblock %}
+{% block title %}About — Al Fahim Fuad{% endblock %}
 
 {% block content %}
-<section class="about-section">
+<section class="section container-x">
+  <h2 class="section-title reveal">About Me</h2>
+  <p class="section-sub reveal">
+    A short look at the person, the path, and the curiosity that drives the work.
+  </p>
 
-  <div class="about-card">
-    <h3>Al Fahim Fuad</h3>
-    <h5>Computer Science and Engineering<br>East West University, Dhaka</h5>
+  <div class="about-grid">
+    <div class="glass-card reveal">
+      <div class="icon">AF</div>
+      <h3>Al Fahim Fuad</h3>
+      <h5>Computer Science &amp; Engineering</h5>
+      <p>East West University, Dhaka — currently exploring the intersection of data,
+        intelligence, and human-centered design.</p>
+    </div>
+
+    <div class="glass-card reveal">
+      <div class="icon">ED</div>
+      <h3>Education</h3>
+      <h5>HSC 2021</h5>
+      <p>Agricultural University College, Mymensingh</p>
+      <h5 class="mt-2">SSC 2019</h5>
+      <p>Anjuman Adarsha Govt High School, Netrakona</p>
+    </div>
+
+    <div class="glass-card reveal">
+      <div class="icon">FX</div>
+      <h3>Focus</h3>
+      <h5>What I love building</h5>
+      <p>Predictive models, data dashboards, recommendation systems, and clean,
+        modern web apps that make complicated data feel effortless.</p>
+    </div>
+
+    <div class="glass-card reveal">
+      <div class="icon">@</div>
+      <h3>Contact</h3>
+      <p><strong>Email:</strong> <a href="mailto:fuad556805@gmail.com">fuad556805@gmail.com</a></p>
+      <p><strong>Phone:</strong> 01338136424</p>
+      <p><strong>Permanent:</strong> Ghatail, Tangail</p>
+      <p><strong>Current:</strong> South Banasree, Dhaka</p>
+    </div>
+
+    <div class="glass-card reveal">
+      <div class="icon">VL</div>
+      <h3>Values</h3>
+      <h5>How I work</h5>
+      <p>Curious, careful with data, and biased toward shipping. I prefer simple
+        solutions, honest metrics, and beautiful interfaces.</p>
+    </div>
+
+    <div class="glass-card reveal">
+      <div class="icon">→</div>
+      <h3>Let's Build</h3>
+      <h5>Open to opportunities</h5>
+      <p>Internships, freelance gigs, research collaborations — if it involves data
+        and impact, let's talk.</p>
+      <p class="mt-2"><a href="{% url 'contact' %}">Send a message →</a></p>
+    </div>
   </div>
-
-  <div class="about-card">
-    <h3>HSC 2021</h3>
-    <h5>Agricultural University College, Mymensingh</h5>
-    <h3>SSC 2019</h3>
-    <h5>Anjuman Adarsha Govt High School, Netrakona</h5>
-  </div>
-
-  <div class="about-card contact-info">
-    <h3>Contact</h3>
-    <p>Email: fuad556805@gmail.com</p>
-    <p>Phone: 01338136424</p>
-    <p>Permanent Address: Ghatail,Tangail</p>
-    <p>Current Address: South Banasree,Dhaka</p>
-  </div>
-
 </section>
 {% endblock %}

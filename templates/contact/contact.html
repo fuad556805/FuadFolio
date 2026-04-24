@@ -1,27 +1,84 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content %}
-<!-- Link the contact.css -->
-<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% block title %}Contact — FuadFolio{% endblock %}
 
-<section class="contact-section d-flex align-items-center">
-  <div class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="contact-card shadow-lg">
-          <h2 class="text-center mb-4 text-glow">Contact Me</h2>
-          <form method="post" class="contact-form">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <div class="text-center">
-              <button type="submit" class="btn btn-neon mt-3">Send Message</button>
-            </div>
-          </form>
+{% block content %}
+<section class="section container-x">
+  <h2 class="section-title reveal">Let's Connect</h2>
+  <p class="section-sub reveal">
+    Have a project, an idea, or just want to say hi? Drop a message and I'll get back to you.
+  </p>
+
+  <div class="contact-wrap">
+    <div class="glass-card contact-info-card reveal">
+      <div class="row-i">
+        <div class="ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
+        </div>
+        <div>
+          <div class="lbl">Email</div>
+          <a class="val" href="mailto:fuad556805@gmail.com">fuad556805@gmail.com</a>
+        </div>
+      </div>
+      <div class="row-i">
+        <div class="ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.92.36 1.82.7 2.68a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.4-1.27a2 2 0 0 1 2.11-.45c.86.34 1.76.57 2.68.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="lbl">Phone</div>
+          <div class="val">+880 1338-136424</div>
+        </div>
+      </div>
+      <div class="row-i">
+        <div class="ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="lbl">Location</div>
+          <div class="val">South Banasree, Dhaka, Bangladesh</div>
+        </div>
+      </div>
+      <div class="row-i">
+        <div class="ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div>
+          <div class="lbl">Response time</div>
+          <div class="val">Usually within 24 hours</div>
         </div>
       </div>
     </div>
+
+    <div class="glass-card reveal">
+      {% if messages %}
+        {% for m in messages %}
+          <div class="alert-success">{{ m }}</div>
+        {% endfor %}
+      {% endif %}
+
+      <form method="post" class="contact-form" novalidate>
+        {% csrf_token %}
+        <p>
+          <label for="{{ form.name.id_for_label }}">Your name</label>
+          {{ form.name }}
+          {{ form.name.errors }}
+        </p>
+        <p>
+          <label for="{{ form.email.id_for_label }}">Email address</label>
+          {{ form.email }}
+          {{ form.email.errors }}
+        </p>
+        <p>
+          <label for="{{ form.message.id_for_label }}">Message</label>
+          {{ form.message }}
+          {{ form.message.errors }}
+        </p>
+        <div>
+          <button type="submit" class="btn btn-primary">Send Message →</button>
+        </div>
+      </form>
+    </div>
   </div>
-  <div class="neon-bg-dots"></div>
 </section>
 {% endblock %}

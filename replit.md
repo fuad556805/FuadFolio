@@ -6,7 +6,7 @@ A personal portfolio website built with Django 4.2.
 
 - **Language**: Python 3.12
 - **Framework**: Django 4.2
-- **Database**: SQLite (`db.sqlite3` at the repo root)
+- **Database**: PostgreSQL (Replit-managed, via `DATABASE_URL`). Falls back to SQLite if `DATABASE_URL` is not set.
 - **Static files**: WhiteNoise
 - **Production server**: Gunicorn
 
