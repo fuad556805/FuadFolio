@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Education
 
-# Create your views here.
+
 def about(request):
-    return render (request, 'about/about.html')
+    educations = Education.objects.all()
+    return render(request, 'about/about.html', {'educations': educations})

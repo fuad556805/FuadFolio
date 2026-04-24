@@ -20,29 +20,11 @@
     </div>
 
     <div class="glass-card reveal">
-      <div class="icon">ED</div>
-      <h3>Education</h3>
-      <h5>HSC 2021</h5>
-      <p>Agricultural University College, Mymensingh</p>
-      <h5 class="mt-2">SSC 2019</h5>
-      <p>Anjuman Adarsha Govt High School, Netrakona</p>
-    </div>
-
-    <div class="glass-card reveal">
       <div class="icon">FX</div>
       <h3>Focus</h3>
       <h5>What I love building</h5>
       <p>Predictive models, data dashboards, recommendation systems, and clean,
         modern web apps that make complicated data feel effortless.</p>
-    </div>
-
-    <div class="glass-card reveal">
-      <div class="icon">@</div>
-      <h3>Contact</h3>
-      <p><strong>Email:</strong> <a href="mailto:fuad556805@gmail.com">fuad556805@gmail.com</a></p>
-      <p><strong>Phone:</strong> 01338136424</p>
-      <p><strong>Permanent:</strong> Ghatail, Tangail</p>
-      <p><strong>Current:</strong> South Banasree, Dhaka</p>
     </div>
 
     <div class="glass-card reveal">
@@ -52,14 +34,74 @@
       <p>Curious, careful with data, and biased toward shipping. I prefer simple
         solutions, honest metrics, and beautiful interfaces.</p>
     </div>
+  </div>
+</section>
 
+<section class="section container-x">
+  <h2 class="section-title reveal">Education Journey</h2>
+  <p class="section-sub reveal">
+    The places that shaped how I think — from school to university.
+  </p>
+
+  <div class="edu-grid">
+    {% for edu in educations %}
+      <article class="edu-card glass-card reveal">
+        <div class="edu-thumb {% if not edu.image %}placeholder{% endif %}">
+          {% if edu.image %}
+            <img src="{{ edu.image.url }}" alt="{{ edu.institution }}">
+          {% endif %}
+          <span class="edu-badge">{{ edu.get_level_display }}</span>
+        </div>
+        <div class="edu-body">
+          <h3>{{ edu.institution }}</h3>
+          {% if edu.degree %}<p class="edu-degree">{{ edu.degree }}</p>{% endif %}
+          <div class="edu-meta">
+            {% if edu.period %}
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                {{ edu.period }}
+              </span>
+            {% endif %}
+            {% if edu.location %}
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                {{ edu.location }}
+              </span>
+            {% endif %}
+          </div>
+          {% if edu.description %}<p class="edu-desc">{{ edu.description }}</p>{% endif %}
+        </div>
+      </article>
+    {% empty %}
+      <div class="empty-state reveal">
+        <h3 style="font-family:'Orbitron',sans-serif; color:var(--cyan); margin-top:0;">No education entries yet</h3>
+        <p>Add your school, college, and university entries from the admin panel — they'll appear here as glassy cards.</p>
+        <a href="/admin/about/education/add/" class="btn btn-ghost mt-2">Add Education →</a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section container-x">
+  <h2 class="section-title reveal">Get in Touch</h2>
+  <p class="section-sub reveal">A few ways to reach me directly.</p>
+
+  <div class="about-grid">
     <div class="glass-card reveal">
-      <div class="icon">→</div>
-      <h3>Let's Build</h3>
-      <h5>Open to opportunities</h5>
-      <p>Internships, freelance gigs, research collaborations — if it involves data
-        and impact, let's talk.</p>
-      <p class="mt-2"><a href="{% url 'contact' %}">Send a message →</a></p>
+      <div class="icon">@</div>
+      <h3>Email</h3>
+      <p><a href="mailto:fuad556805@gmail.com">fuad556805@gmail.com</a></p>
+    </div>
+    <div class="glass-card reveal">
+      <div class="icon">☎</div>
+      <h3>Phone</h3>
+      <p>+880 1338-136424</p>
+    </div>
+    <div class="glass-card reveal">
+      <div class="icon">⌖</div>
+      <h3>Address</h3>
+      <p><strong>Permanent:</strong> Ghatail, Tangail</p>
+      <p><strong>Current:</strong> South Banasree, Dhaka</p>
     </div>
   </div>
 </section>
