@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-7w)r1*d=kqo!*5)eu@=x%21(vr9dw@!ty)h*uy7_194@$cx@x7
 DEBUG = True
 
 # Fix for Render deployment
-ALLOWED_HOSTS = ['fuadfolio.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'fuadfolio.onrender.com']
 
 
 # Application definition
