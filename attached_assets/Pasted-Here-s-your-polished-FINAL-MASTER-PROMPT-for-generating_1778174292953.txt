@@ -1,0 +1,360 @@
+Here’s your polished **FINAL MASTER PROMPT** for generating a premium AI portfolio homepage/UI with excellent responsiveness and modern aesthetics:
+
+```txt
+Create a world-class modern AI Engineer portfolio website for “FuadFolio”(with image type logo) with a premium futuristic glassmorphism aesthetic inspired by Apple, Linear, Framer, and modern SaaS landing pages. 
+
+========================================
+🎯 PRIMARY GOAL
+========================================
+
+Design a visually stunning, highly responsive, premium-quality personal portfolio homepage that looks professional on:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+The UI must feel modern, elegant, futuristic, clean, smooth, and balanced — NOT like a beginner template.
+
+Focus heavily on:
+- responsiveness
+- spacing
+- typography hierarchy
+- visual balance
+- modern animations
+- glassmorphism effects
+- premium UI/UX
+- mobile optimization
+
+========================================
+⚠️ IMPORTANT PROBLEMS TO FIX
+========================================
+
+Fix all responsiveness and UI issues:
+
+1. Hero section spacing breaks on mobile.
+2. Profile card becomes oversized on smaller screens.
+3. Text alignment looks inconsistent on mobile.
+4. Buttons overflow or stack awkwardly.
+5. Navbar spacing and responsiveness are poor.
+6. Hero image/card positioning feels unbalanced.
+7. Typography lacks hierarchy and scaling.
+8. Section spacing feels inconsistent.
+9. Contact/social links overflow on mobile.
+10. Horizontal scrolling must NEVER happen.
+11. Improve responsiveness between all breakpoints.
+
+========================================
+🎨 DESIGN STYLE
+========================================
+
+STYLE:
+- Premium futuristic UI
+- Glassmorphism
+- Minimal but visually rich
+- Elegant and modern
+- AI engineer aesthetic
+- Soft blue + white gradient palette
+- Clean modern SaaS style
+- Apple + Linear inspired
+
+BACKGROUND:
+- Soft animated blue gradients
+- Subtle grid overlay
+- Floating blurred glow circles
+- Smooth gradient transitions
+- Premium depth and layering
+
+VISUAL EFFECTS:
+- Glass blur panels
+- Glow effects
+- Gradient borders
+- Smooth hover animations
+- Floating animations
+- Fade-in transitions
+- Soft shadows
+- Backdrop blur
+- Gradient text effects
+
+TYPOGRAPHY:
+- Font: Inter / Poppins / Sora
+- Strong hierarchy
+- Clean readability
+- Use clamp() for responsive typography
+- Large bold hero heading
+- Elegant spacing between text blocks
+
+========================================
+📱 RESPONSIVE LAYOUT REQUIREMENTS
+========================================
+
+DESKTOP:
+- 2-column hero layout
+- Left = content
+- Right = floating profile card
+- Balanced spacing
+- Large clean typography
+
+TABLET:
+- Reduce profile card size
+- Maintain proper spacing
+- Optimize text widths
+- Responsive grid layouts
+
+MOBILE:
+- Stack sections vertically
+- Profile card centered on top
+- Reduce heading size
+- Full-width buttons
+- Vertically aligned contact links
+- Proper padding on all sides
+- No overflow-x
+- Better spacing between elements
+- Smooth mobile menu
+- Compact but elegant layout
+
+========================================
+🧭 NAVBAR
+========================================
+
+Create a sticky glassmorphism navbar.
+
+LEFT:
+- Logo:
+  “FUADFOLIO”
+
+CENTER/DESKTOP:
+- Home
+- About
+- Skills
+- Projects
+- Contact
+
+RIGHT:
+- “Hire Me” CTA button
+
+MOBILE:
+- Hamburger menu
+- Slide-down glass mobile menu
+- Smooth open/close animation
+- Touch-friendly spacing
+- Active link indicator
+- Sticky blur effect on scroll
+
+========================================
+🚀 HERO SECTION
+========================================
+
+LAYOUT:
+Desktop = 2 columns
+Mobile = stacked layout
+
+LEFT SIDE:
+- Small glowing badge:
+  “🚀 Available For Collaboration”
+
+- Main Heading:
+  “AI Fahim Fuad”
+
+- Apply gradient effect on:
+  “Fuad”
+
+- Subtitle:
+  “Data Scientist • ML Engineer • AI Builder”
+
+- Professional AI-focused description:
+  Mention AI systems, ML engineering, intelligent web apps, data science, etc.
+
+- CTA Buttons:
+  1. View Projects
+  2. Download CV
+
+- Social Icons:
+  GitHub
+  LinkedIn
+  Email
+
+RIGHT SIDE:
+Create a floating premium glass profile card with:
+- Circular avatar/profile image
+- Animated glowing border
+- Floating animation
+- Tech stack badges:
+  Python
+  ML
+  Django
+  TensorFlow
+  AI
+
+- Soft glow behind card
+- Better mobile proportions
+- Elegant spacing inside card
+
+========================================
+📊 STATS SECTION
+========================================
+
+Create modern glass cards showing:
+- 3+ Years Experience
+- 15+ Projects
+- AI/ML Focus
+- 100% Responsive Design
+
+Use:
+- Hover animations
+- Glow effects
+- Clean grid layout
+- Responsive cards
+
+========================================
+🧠 SKILLS SECTION
+========================================
+
+Modern responsive skill grid with cards for:
+- Python
+- Machine Learning
+- Django
+- TensorFlow
+- Deep Learning
+- SQL
+- Data Science
+- React
+
+Each skill card should include:
+- Icon
+- Gradient border
+- Hover glow
+- Lift animation
+- Glassmorphism design
+
+========================================
+💼 FEATURED PROJECTS SECTION
+========================================
+
+Create premium project cards containing:
+- Thumbnail image
+- Project title
+- Short description
+- Tech stack tags
+- Live Demo button
+- GitHub button
+
+Animations:
+- Hover lift effect
+- Glow border
+- Smooth transitions
+
+Cards should look modern SaaS-quality.
+
+========================================
+👨‍💻 ABOUT SECTION
+========================================
+
+Create a clean modern About section with:
+- Professional bio
+- AI passion statement
+- Education info
+- Experience timeline/cards
+- Soft glowing background
+- Responsive split layout
+
+========================================
+📬 CONTACT SECTION
+========================================
+
+Create a modern glassmorphism contact section containing:
+- Email
+- LinkedIn
+- GitHub
+- Location
+- Contact form
+- Animated send button
+
+Requirements:
+- Fully responsive
+- Clean spacing
+- Elegant form styling
+- Soft glow effects
+
+========================================
+🦶 FOOTER
+========================================
+
+Modern minimal footer with:
+- FUADFOLIO logo
+- Short AI tagline
+- Social icons
+- Copyright
+- Smooth top border glow
+
+========================================
+⚙️ TECHNICAL REQUIREMENTS
+========================================
+
+Use:
+- Modern HTML5
+- Clean semantic structure
+- CSS variables
+- Flexbox + CSS Grid
+- Clamp typography
+- Smooth scrolling
+- Responsive utility spacing
+- Proper max-width containers
+- Reusable components
+- Mobile-first responsiveness
+- Optimized spacing system
+- Accessible design
+
+========================================
+✨ ANIMATIONS
+========================================
+
+Add:
+- Fade-in animations
+- Floating profile card animation
+- Smooth hover transitions
+- Gradient glow movement
+- Navbar transitions
+- Scroll reveal animations
+- Button hover interactions
+
+Animations should feel:
+- smooth
+- premium
+- subtle
+- professional
+
+========================================
+🚫 IMPORTANT RESTRICTIONS
+========================================
+
+DO NOT:
+- Use outdated UI
+- Use excessive colors
+- Create cluttered layouts
+- Make oversized mobile cards
+- Allow overflow-x scrolling
+- Use beginner-level styling
+- Make spacing inconsistent
+
+========================================
+✅ FINAL EXPECTATION
+========================================
+
+The final website must feel like:
+- A premium AI engineer portfolio
+- A modern SaaS landing page
+- Elegant and futuristic
+- Extremely responsive
+- Visually balanced
+- Smooth and polished
+- Professional enough for clients/recruiters
+
+The homepage should instantly impress visitors with:
+- premium UI quality
+- modern responsiveness
+- clean structure
+- smooth animations
+- beautiful glassmorphism aesthetics
+- futuristic AI vibe
+```
