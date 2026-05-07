@@ -4,82 +4,203 @@
 {% block title %}Al Fahim Fuad — Data Science & ML Portfolio{% endblock %}
 
 {% block content %}
-<section class="hero container-x">
-  <div class="hero-grid">
-    <div class="reveal">
-      <span class="eyebrow"><span class="pulse"></span> Available for collaboration</span>
-      <h1>Hi, I'm <span class="grad">Al Fahim Fuad</span></h1>
-      <p class="role">Data Science · Machine Learning · AI Engineering</p>
-      <p class="lead">
-        I design and ship intelligent systems &mdash; from data pipelines and predictive models
-        to clean, futuristic web experiences powered by AI. Let's turn data into something delightful.
+
+<!-- ===== HERO / CV HEADER ===== -->
+<section class="cv-hero container-x">
+  <div class="cv-hero-grid">
+
+    <!-- Left: Text content -->
+    <div class="cv-hero-text reveal">
+      <span class="availability-badge"><span class="pulse"></span> Available for Collaboration</span>
+
+      <h1 class="cv-name">Al Fahim <span class="grad">Fuad</span></h1>
+      <p class="cv-title">Data Scientist &nbsp;&bull;&nbsp; ML Engineer &nbsp;&bull;&nbsp; AI Builder</p>
+
+      <p class="cv-summary">
+        I build intelligent systems — from end-to-end data pipelines and predictive models
+        to clean, modern web applications powered by AI. Currently studying Computer Science
+        at East West University, Dhaka, and turning ideas into data-driven products.
       </p>
-      <div class="hero-cta">
-        <a href="{% url 'portfolio' %}" class="btn btn-primary">View Projects →</a>
-        <a href="{% url 'contact' %}" class="btn btn-ghost">Get in touch</a>
+
+      <!-- Contact row -->
+      <div class="cv-contact-row">
+        <a href="mailto:fuad556805@gmail.com" class="cv-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
+          fuad556805@gmail.com
+        </a>
+        <a href="https://github.com/fuad556805" target="_blank" rel="noopener" class="cv-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.55v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.04 1.78 2.72 1.27 3.39.97.1-.75.4-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.14v3.18c0 .31.21.66.8.55A11.5 11.5 0 0 0 12 .5z"/></svg>
+          fuad556805
+        </a>
+        <a href="https://www.linkedin.com/in/al-fahim-36126636b" target="_blank" rel="noopener" class="cv-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.84v1.64h.05c.53-1 1.84-2.06 3.78-2.06 4.05 0 4.8 2.66 4.8 6.13V21h-4v-5.5c0-1.31-.03-3-1.83-3-1.84 0-2.12 1.43-2.12 2.91V21h-4z"/></svg>
+          LinkedIn
+        </a>
+        <span class="cv-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Dhaka, Bangladesh
+        </span>
       </div>
 
-      <div class="hero-stats">
-        <div class="stat"><div class="num">3+</div><div class="lbl">Years coding</div></div>
-        <div class="stat"><div class="num">15+</div><div class="lbl">Projects shipped</div></div>
-        <div class="stat"><div class="num">∞</div><div class="lbl">Ideas in queue</div></div>
+      <!-- CTA -->
+      <div class="cv-cta">
+        <a href="{% url 'portfolio' %}" class="btn btn-primary">View Projects &rarr;</a>
+        <a href="{% url 'contact' %}" class="btn btn-ghost">Get in Touch</a>
       </div>
     </div>
 
-    <div class="reveal">
+    <!-- Right: Portrait card -->
+    <div class="cv-hero-portrait reveal">
       <div class="portrait-card">
-        <img src="{% static 'images/fuad.png' %}" alt="Al Fahim Fuad">
+        <img src="{% static 'images/fuad.png' %}" alt="Al Fahim Fuad" onerror="this.parentElement.classList.add('no-img')">
         <div class="portrait-meta">
-          <h3>AF FUAD</h3>
-          <p>ML Enthusiast &amp; AI Explorer</p>
+          <div class="portrait-name">AF FUAD</div>
+          <div class="portrait-sub">ML Enthusiast &amp; AI Explorer</div>
+          <div class="portrait-tags">
+            <span>Python</span><span>ML</span><span>Django</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<section class="section container-x">
-  <h2 class="section-title reveal">What I Work With</h2>
-  <p class="section-sub reveal">A toolbox of technologies I use day-to-day to ship products end&#8209;to&#8209;end.</p>
-  <div class="chips reveal">
-    <span class="chip">Python</span>
-    <span class="chip">Pandas</span>
-    <span class="chip">NumPy</span>
-    <span class="chip">scikit-learn</span>
-    <span class="chip">TensorFlow</span>
-    <span class="chip">PyTorch</span>
-    <span class="chip">Django</span>
-    <span class="chip">FastAPI</span>
-    <span class="chip">PostgreSQL</span>
-    <span class="chip">Matplotlib</span>
-    <span class="chip">Seaborn</span>
-    <span class="chip">Git</span>
+  <!-- Stats bar -->
+  <div class="cv-stats-bar reveal">
+    <div class="cv-stat">
+      <span class="cv-stat-num">3+</span>
+      <span class="cv-stat-lbl">Years Coding</span>
+    </div>
+    <div class="cv-stat-divider"></div>
+    <div class="cv-stat">
+      <span class="cv-stat-num">15+</span>
+      <span class="cv-stat-lbl">Projects Shipped</span>
+    </div>
+    <div class="cv-stat-divider"></div>
+    <div class="cv-stat">
+      <span class="cv-stat-num">CSE</span>
+      <span class="cv-stat-lbl">EWU, Dhaka</span>
+    </div>
+    <div class="cv-stat-divider"></div>
+    <div class="cv-stat">
+      <span class="cv-stat-num">&infin;</span>
+      <span class="cv-stat-lbl">Ideas in Queue</span>
+    </div>
   </div>
 </section>
 
+<!-- ===== SKILLS ===== -->
+<section class="section container-x">
+  <h2 class="section-title reveal">Technical Skills</h2>
+  <p class="section-sub reveal">A curated toolbox of technologies I use to ship products end-to-end.</p>
+
+  <div class="skills-grid reveal">
+    <div class="skill-group">
+      <div class="skill-group-label">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        Languages
+      </div>
+      <div class="skill-chips">
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">HTML / CSS</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-label">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        Data Science & ML
+      </div>
+      <div class="skill-chips">
+        <span class="chip">Pandas</span>
+        <span class="chip">NumPy</span>
+        <span class="chip">scikit-learn</span>
+        <span class="chip">TensorFlow</span>
+        <span class="chip">PyTorch</span>
+        <span class="chip">Matplotlib</span>
+        <span class="chip">Seaborn</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-label">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        Web & Backend
+      </div>
+      <div class="skill-chips">
+        <span class="chip">Django</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">REST APIs</span>
+        <span class="chip">PostgreSQL</span>
+        <span class="chip">SQLite</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-label">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        Tools & Platforms
+      </div>
+      <div class="skill-chips">
+        <span class="chip">Git & GitHub</span>
+        <span class="chip">Jupyter</span>
+        <span class="chip">VS Code</span>
+        <span class="chip">Linux</span>
+        <span class="chip">Gunicorn</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT I DO ===== -->
 <section class="section container-x">
   <h2 class="section-title reveal">What I Do</h2>
   <p class="section-sub reveal">Three focus areas where data, models, and clean engineering meet.</p>
 
-  <div class="about-grid">
-    <div class="glass-card reveal">
-      <div class="icon">DS</div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="m7 16 4-8 4 4 2-4"/></svg>
+      </div>
       <h3>Data Science</h3>
-      <p>Turning raw, messy datasets into clear insights through cleaning, exploration,
-        statistics, and beautiful visualizations.</p>
+      <p>Turning raw, messy datasets into clear insights through cleaning, exploration, statistical analysis, and beautiful visualizations that tell a story.</p>
+      <ul class="service-list">
+        <li>Exploratory data analysis</li>
+        <li>Data cleaning & pipelines</li>
+        <li>Statistical modeling</li>
+        <li>Dashboards & reports</li>
+      </ul>
     </div>
-    <div class="glass-card reveal">
-      <div class="icon">ML</div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><circle cx="18" cy="6" r="3"/></svg>
+      </div>
       <h3>Machine Learning</h3>
-      <p>Building, evaluating, and deploying classical ML and deep-learning models that
-        actually solve a real-world problem.</p>
+      <p>Building, evaluating, and deploying classical ML and deep-learning models that actually solve real-world problems with measurable results.</p>
+      <ul class="service-list">
+        <li>Classification & regression</li>
+        <li>Neural networks (CNN, RNN)</li>
+        <li>Model evaluation & tuning</li>
+        <li>Deployment & integration</li>
+      </ul>
     </div>
-    <div class="glass-card reveal">
-      <div class="icon">UI</div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h10M7 12h6"/></svg>
+      </div>
       <h3>Web Engineering</h3>
-      <p>Crafting fast, responsive, and modern web apps with Django, REST APIs, and
-        carefully designed UI systems.</p>
+      <p>Crafting fast, responsive, and modern web applications with Django and REST APIs, with carefully designed UI systems and data-powered backends.</p>
+      <ul class="service-list">
+        <li>Django web applications</li>
+        <li>REST API development</li>
+        <li>Database design</li>
+        <li>Responsive UI/UX</li>
+      </ul>
     </div>
   </div>
 </section>
+
 {% endblock %}
