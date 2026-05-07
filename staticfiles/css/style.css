@@ -541,6 +541,7 @@ a.cv-contact-item:hover { color: var(--cyan); }
         text-align: center;
     }
     .cv-hero-text { display: flex; flex-direction: column; align-items: center; }
+    .cv-hero-portrait { order: -1; }
     .cv-summary { max-width: 100%; }
     .cv-contact-row { justify-content: center; }
     .cv-cta { justify-content: center; }
